@@ -60,6 +60,7 @@ export default class MoviesDAO {
       // and _id. Do not put a limit in your own implementation, the limit
       // here is only included to avoid sending 46000 documents down the
       // wire.
+      // I added what is in between the (). Saying find countries and project the _id(implied) and the title(by typing 1).
       cursor = await movies.find(
         {countries: {$in: countries }},
         { projection: {title: 1}}
