@@ -44,6 +44,7 @@ export default class MoviesDAO {
    * @returns {Promise<CountryResult>} A promise that will resolve to a list of CountryResults.
    */
   static async getMoviesByCountry(countries) {
+    console.log(countries)
     /**
     Ticket: Projection
 
