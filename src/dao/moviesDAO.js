@@ -46,7 +46,6 @@ export default class MoviesDAO {
   static async getMoviesByCountry(countries) {
     /**
     Ticket: Projection
-
     Write a query that matches movies with the countries in the "countries"
     list, but only returns the title and _id of each movie.
 
@@ -118,7 +117,7 @@ export default class MoviesDAO {
 
     // TODO Ticket: Text and Subfield Search
     // Construct a query that will search for the chosen genre.
-    const query = {}
+    const query = { genres: {$in: searchGenre}}
     const project = {}
     const sort = DEFAULT_SORT
 
