@@ -262,6 +262,7 @@ export default class MoviesDAO {
 
     // TODO Ticket: Paging
     // Use the cursor to only return the movies that belong on the current page
+    // Add ".skip(moviesPerPage * page)" to be able to add 20 more items once it reaches to the end.
     const displayCursor = cursor.limit(moviesPerPage).skip(moviesPerPage * page)
 
     try {
