@@ -122,7 +122,7 @@ export default class UsersDAO {
     try {
       // TODO Ticket: User Management
       // Retrieve the session document corresponding with the user's email.
-      return sessions.findOne({ someField: "someValue" })
+      return sessions.findOne({ user_id: email })
     } catch (e) {
       console.error(`Error occurred while retrieving user session, ${e}`)
       return null
