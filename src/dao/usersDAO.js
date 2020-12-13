@@ -39,7 +39,7 @@ export default class UsersDAO {
   static async getUser(email) {
     // TODO Ticket: User Management
     // Retrieve the user document corresponding with the user's email.
-    return await users.findOne({ someField: "someValue" })
+    return await users.findOne({ email })
   }
 
   /**
