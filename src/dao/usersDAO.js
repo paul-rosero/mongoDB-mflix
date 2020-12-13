@@ -58,6 +58,7 @@ export default class UsersDAO {
     try {
       // TODO Ticket: User Management
       // Insert a user with the "name", "email", and "password" fields.
+      let { name, email, password } = userInfo
       // TODO Ticket: Durable Writes
       // Use a more durable Write Concern for this operation.
       await users.insertOne({ someField: "someValue" })
