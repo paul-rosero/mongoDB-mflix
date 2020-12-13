@@ -96,7 +96,7 @@ export default class UsersDAO {
   }
 
   /**
-   * Removes a user from the `sessons` collection
+   * Removes a user from the `sessions` collection
    * @param {string} email - The email of the user to logout
    * @returns {DAOResponse} Returns either a "success" or an "error" Object
    */
@@ -104,7 +104,7 @@ export default class UsersDAO {
     try {
       // TODO Ticket: User Management
       // Delete the document in the `sessions` collection matching the email.
-      await sessions.deleteOne({ someField: "someValue" })
+      await sessions.deleteOne({ user_id: email })
       return { success: true }
     } catch (e) {
       console.error(`Error occurred while logging out user, ${e}`)
