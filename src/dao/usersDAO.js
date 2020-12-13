@@ -84,8 +84,9 @@ export default class UsersDAO {
       // Use an UPSERT statement to update the "jwt" field in the document,
       // matching the "user_id" field with the email passed to this function.
       await sessions.updateOne(
-        { someField: "someValue" },
-        { $set: { someOtherField: "someOtherValue" } },
+        { user_id: email },
+        { $set: { jwt } },
+        { upset: true}
       )
       return { success: true }
     } catch (e) {
