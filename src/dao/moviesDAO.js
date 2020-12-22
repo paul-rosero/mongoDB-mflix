@@ -306,6 +306,18 @@ export default class MoviesDAO {
           $match: {
             _id: ObjectId(id)
           }
+        }, //added from here to the end to pass this test.
+          {$lookup: {
+            from: "comments",
+            let: { 'id': '$_id' },
+            pipeline: [
+              {
+                $match: { $expr: { $eq: ['$movie_id', '$$id'] }}
+              },
+              { $sort: { 'date': -1 } }
+            ],
+            as: "comments"
+          }
         }
       ]
       return await movies.aggregate(pipeline).next()
