@@ -25,8 +25,8 @@ MongoClient.connect(
   // TODO: Connection Pooling
   // Set the poolSize to 50 connections.
   { 
-    poolSize: 50, // added this code to pass test.
-    wtimeout: 2500 
+    poolSize: 50, // added this code to pass TODO: Connection Pooling
+    wtimeout: 2500 // added this to pass the TODO: Timeouts
   },  
   // TODO: Timeouts
   // Set the write timeout limit to 2500 milliseconds.
