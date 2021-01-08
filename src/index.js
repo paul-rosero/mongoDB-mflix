@@ -24,7 +24,7 @@ MongoClient.connect(
   process.env.MFLIX_DB_URI,
   // TODO: Connection Pooling
   // Set the poolSize to 50 connections.
-  { poolSize: 50 }, 
+  { poolSize: 50 }, // added this code to pass test. 
   // TODO: Timeouts
   // Set the write timeout limit to 2500 milliseconds.
   { useNewUrlParser: true, useUnifiedTopology: true },
